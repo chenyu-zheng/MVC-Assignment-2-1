@@ -31,6 +31,8 @@ namespace Assignment_2_1.Migrations
                 context.Products.Add(product);
             }
 
+            context.SaveChanges();
+
             Customer customer = null;
             if (!context.Customers.Any(c => c.Name == "Dummy Customer"))
             {
@@ -42,6 +44,8 @@ namespace Assignment_2_1.Migrations
                 context.Customers.Add(customer);
             }
 
+            context.SaveChanges();
+
             Employee employee = null;
             if (!context.Employees.Any(e => e.Name == "Dummy Employee"))
             {
@@ -52,6 +56,8 @@ namespace Assignment_2_1.Migrations
                 };
                 context.Employees.Add(employee);
             }
+
+            context.SaveChanges();
 
             StoreLocation store = null;
             if (!context.StoreLocations.Any(s => s.LocationName == "Deserted Store"))

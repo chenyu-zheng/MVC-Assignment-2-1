@@ -8,7 +8,7 @@ namespace Assignment_2_1.Models
 {
     public class Employee
     {
-        public string Id { get; set; }
+        public int Id { get; set; }
         public string Name { get; set; }
         public int RegistrationNumber { get; set; }
         [InverseProperty("Employee")]
