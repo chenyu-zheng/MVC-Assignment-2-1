@@ -82,6 +82,8 @@ namespace Assignment_2_1.Migrations
                 sale.Employee = context.Employees.FirstOrDefault(e => e.RegistrationNumber == 100001);
                 sale.StoreLocation = context.StoreLocations.FirstOrDefault(e => e.LocationName == "Deserted Store");
                 sale.Products.Add(context.Products.FirstOrDefault(p => p.Name == "Sample Product"));
+
+                context.Sales.Add(sale);
             }
 
             context.SaveChanges();
